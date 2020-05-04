@@ -1,0 +1,348 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Leandro Santos</title>
+        <link>/posts/</link>
+        <description>Recent content in Posts on Leandro Santos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sun, 03 May 2020 14:36:50 +0000</lastBuildDate>
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Boas práticas em bash/sh - shell scripts</title>
+            <link>/posts/2020/05/boas-pr%C3%A1ticas-em-bash/sh-shell-scripts/</link>
+            <pubDate>Sun, 03 May 2020 14:36:50 +0000</pubDate>
+            
+            <guid>/posts/2020/05/boas-pr%C3%A1ticas-em-bash/sh-shell-scripts/</guid>
+            <description>Comentários  https://cleitonbueno.com/shell-script-comentarios/  comentários de várias linhas não funcionam em todos os SHELL    Debug  set -vx and set +vx bash -vx script.sh https://www.cyberciti.biz/tips/debugging-shell-script.html  function DEBUG   ShellCheck: https://www.cyberciti.biz/programming/improve-your-bashsh-shell-script-with-shellcheck-lint-script-analysis-tool/  install plugin in vim    Exit codes vim https://www.cyberciti.biz/faq/turn-on-or-off-color-syntax-highlighting-in-vi-or-vim/
+mkdir ~/.vim/autoload -p cd .vim/autoload/ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim </description>
+            <content type="html"><![CDATA[<h2 id="comentários">Comentários</h2>
+<ul>
+<li><a href="https://cleitonbueno.com/shell-script-comentarios/">https://cleitonbueno.com/shell-script-comentarios/</a>
+<ul>
+<li>comentários de várias linhas não funcionam em todos os SHELL</li>
+</ul>
+</li>
+</ul>
+<h2 id="debug">Debug</h2>
+<ul>
+<li><code>set -vx</code> and <code>set +vx</code></li>
+<li><code>bash -vx script.sh</code></li>
+<li><a href="https://www.cyberciti.biz/tips/debugging-shell-script.html">https://www.cyberciti.biz/tips/debugging-shell-script.html</a>
+<ul>
+<li><code>function DEBUG</code></li>
+</ul>
+</li>
+<li>ShellCheck: <a href="https://www.cyberciti.biz/programming/improve-your-bashsh-shell-script-with-shellcheck-lint-script-analysis-tool/">https://www.cyberciti.biz/programming/improve-your-bashsh-shell-script-with-shellcheck-lint-script-analysis-tool/</a>
+<ul>
+<li>install plugin in vim</li>
+</ul>
+</li>
+</ul>
+<h2 id="exit-codes">Exit codes</h2>
+<h2 id="vim">vim</h2>
+<p><a href="https://www.cyberciti.biz/faq/turn-on-or-off-color-syntax-highlighting-in-vi-or-vim/">https://www.cyberciti.biz/faq/turn-on-or-off-color-syntax-highlighting-in-vi-or-vim/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/.vim/autoload -p
+cd .vim/autoload/
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+</code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Deploy hugo to github-pages</title>
+            <link>/posts/2020/05/deploy-hugo-to-github-pages/</link>
+            <pubDate>Fri, 01 May 2020 21:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/05/deploy-hugo-to-github-pages/</guid>
+            <description>blog/  deploy.sh public/    github  tem somente o diretório /public do hugo  Build docker run --rm -v $PWD:/blog hugo hugo
+deploy to github deploy.sh
+#!/bin/env bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. `docker run --rm -v $PWD:/blog hugo hugo` # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` git -C public add . # Go To Public folder cd public # Add changes to git.</description>
+            <content type="html"><![CDATA[<ul>
+<li>blog/
+<ul>
+<li>deploy.sh</li>
+<li>public/</li>
+</ul>
+</li>
+</ul>
+<h2 id="github">github</h2>
+<ul>
+<li>tem somente o diretório /public do hugo</li>
+</ul>
+<h2 id="build">Build</h2>
+<p><code>docker run --rm -v $PWD:/blog hugo hugo</code></p>
+<h2 id="deploy-to-github">deploy to github</h2>
+<p><strong>deploy.sh</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/env bash
+</span><span style="color:#75715e"></span>echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+<span style="color:#75715e"># Build the project.</span>
+<span style="color:#e6db74">`</span>docker run --rm -v $PWD:/blog hugo hugo<span style="color:#e6db74">`</span> <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+git -C public add .
+<span style="color:#75715e"># Go To Public folder</span>
+cd public
+<span style="color:#75715e"># Add changes to git.</span>
+git add .
+<span style="color:#75715e"># Commit changes.</span>
+msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span>
+git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
+git -C public push origin master
+<span style="color:#75715e"># Push source and build repos.</span>
+git push origin master
+<span style="color:#75715e"># Come Back up to the Project Root</span>
+cd ..
+</code></pre></div><h2 id="nginx-reverse-proxy">nginx reverse proxy</h2>
+<p><code>docker run -itd -p 80:80 --name proxy -v $PWD/public:/usr/share/nginx/html nginx</code></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>SSH</title>
+            <link>/posts/2020/04/ssh/</link>
+            <pubDate>Tue, 21 Apr 2020 09:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/ssh/</guid>
+            <description>Instalação - client+server  apt install openssh-client  Troca de chaves  ssh-keygen -b 4096 ssh-copy-id user@server  Acessando com chave privada  Permissão da chave:  A chave não pode ter permissão muito aberta. Use algo do tipo: chmod 600 chave.pem  somente seu user pode editar a chave   Se a permissão for muito permissiva, aparecerá um warning e a conexão não será efetuada.    Organize os acessos com o arquivo ~/.</description>
+            <content type="html"><![CDATA[<h2 id="instalação---clientserver">Instalação - client+server</h2>
+<ul>
+<li><code>apt install openssh-client</code></li>
+</ul>
+<h2 id="troca-de-chaves">Troca de chaves</h2>
+<ul>
+<li><code>ssh-keygen -b 4096</code></li>
+<li><code>ssh-copy-id user@server</code></li>
+</ul>
+<h3 id="acessando-com-chave-privada">Acessando com chave privada</h3>
+<ul>
+<li>Permissão da chave:
+<ul>
+<li>A chave não pode ter permissão muito aberta. Use algo do tipo:
+<code>chmod 600 chave.pem</code>
+<ul>
+<li>somente seu user pode editar a chave</li>
+</ul>
+</li>
+<li>Se a permissão for muito permissiva, aparecerá um <em>warning</em> e a conexão não será efetuada.</li>
+</ul>
+</li>
+</ul>
+<h2 id="organize-os-acessos-com-o-arquivo-sshconfig">Organize os acessos com o arquivo <code>~/.ssh/config</code></h2>
+<ul>
+<li>Pode ser por user <code>~/.ssh/config</code> ou system-wide <code>/etc/ssh/ssh_config</code></li>
+<li>Edite (ou crie) o arquivo da seguinte forma: <code>vim ~/.ssh/config</code></li>
+</ul>
+<pre><code class="language-conf" data-lang="conf">Host server01
+   HostName 10.200.66.69
+   User root
+   UserKnownHostsFile=/dev/null
+Host server02
+   HostName 10.200.66.6
+   User core
+   IdentityFile /~/server02.pem  
+</code></pre><ul>
+<li>Dessa forma é possível logar no server assim:
+<code>ssh server01</code></li>
+</ul>
+<h2 id="hot-tips">HOT TIPS</h2>
+<ul>
+<li>QUIET</li>
+<li>Tempo de execução do comando ssh</li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Docker - Parte 1</title>
+            <link>/posts/2020/04/docker-parte-1/</link>
+            <pubDate>Tue, 21 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/docker-parte-1/</guid>
+            <description>O que é Docker? Instalação  latest version: curl -fsSL https://get.docker.com | bash  Primeiros passos docker run -d --name nginx -p 8080:80 nginx:latest
+Parte 1
+Parte 2
+Parte 3
+Portainer</description>
+            <content type="html"><![CDATA[<h2 id="o-que-é-docker">O que é Docker?</h2>
+<h2 id="instalação">Instalação</h2>
+<ul>
+<li>latest version: <code>curl -fsSL https://get.docker.com | bash</code></li>
+</ul>
+<h2 id="primeiros-passos">Primeiros passos</h2>
+<p><code>docker run -d --name nginx -p 8080:80 nginx:latest</code></p>
+<p><a href="/posts/2020/04/docker-parte-1">Parte 1</a></p>
+<p><a href="/posts/2020/04/dockerfile">Parte 2</a></p>
+<p><a href="/posts/2020/04/docker-compose">Parte 3</a></p>
+<p><a href="/posts/2020/04/portainer">Portainer</a></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>docker-compose</title>
+            <link>/posts/2020/04/docker-compose/</link>
+            <pubDate>Tue, 21 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/docker-compose/</guid>
+            <description>Como instalar   Documentação oficial: https://docs.docker.com/compose/install/
+  EASY WAY
+ ubuntu: apt install docker-compose não é a versão latest    SCRIPT RAIZ
+  #!/bin/bash VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest \ 	| grep tag_name \ 	| cut -d &amp;#39;&amp;#34;&amp;#39; -f 4) DESTINATION=/usr/local/bin/docker-compose sudo curl \ 	--location https://github.com/docker/compose/releases/download/${VERSION}/\ 	docker-compose-$(uname -s)-$(uname -m) \ 	--output $DESTINATION sudo chmod 755 $DESTINATION Básico version:&amp;#39;3&amp;#39; services: app: container_name:app build: context: .</description>
+            <content type="html"><![CDATA[<h2 id="como-instalar">Como instalar</h2>
+<ul>
+<li>
+<p>Documentação oficial: <a href="https://docs.docker.com/compose/install/">https://docs.docker.com/compose/install/</a></p>
+</li>
+<li>
+<p>EASY WAY</p>
+<ul>
+<li>ubuntu: <code>apt install docker-compose</code></li>
+<li>não é a versão <em>latest</em></li>
+</ul>
+</li>
+<li>
+<p><strong>SCRIPT RAIZ</strong></p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>VERSION<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>curl --silent https://api.github.com/repos/docker/compose/releases/latest <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	| grep tag_name <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	| cut -d <span style="color:#e6db74">&#39;&#34;&#39;</span> -f 4<span style="color:#66d9ef">)</span>
+DESTINATION<span style="color:#f92672">=</span>/usr/local/bin/docker-compose
+sudo curl <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	--location https://github.com/docker/compose/releases/download/<span style="color:#e6db74">${</span>VERSION<span style="color:#e6db74">}</span>/<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	docker-compose-<span style="color:#66d9ef">$(</span>uname -s<span style="color:#66d9ef">)</span>-<span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>	--output $DESTINATION
+sudo chmod <span style="color:#ae81ff">755</span> $DESTINATION
+</code></pre></div><h2 id="básico">Básico</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml">version:<span style="color:#e6db74">&#39;3&#39;</span>
+<span style="color:#66d9ef">services</span>:
+ <span style="color:#66d9ef">app</span>:
+  container_name:app
+  <span style="color:#66d9ef">build</span>:
+   <span style="color:#66d9ef">context</span>: .
+  <span style="color:#66d9ef">volumes</span>:
+   - .:/home/app
+  <span style="color:#66d9ef">environment</span>:
+   - <span style="color:#66d9ef">VARIAVEL</span>: $BLA
+  ports
+   - <span style="color:#ae81ff">80</span>
+</code></pre></div><h2 id="variáveis-de-ambiente---env">Variáveis de ambiente - .env</h2>
+<p><strong>.env</strong></p>
+<pre><code>BLA=&quot;teste&quot;
+</code></pre><h2 id="fazendo-build-da-imagem">Fazendo build da imagem</h2>
+<ul>
+<li><code>docker-compose up --build --force-recreate -d</code></li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Docker - Proxy reverso **MÁGICO**</title>
+            <link>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</link>
+            <pubDate>Sat, 11 Apr 2020 09:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</guid>
+            <description>Automatic proxy - jwilder https://hub.docker.com/r/jwilder/nginx-proxy/
+Básico  Suba o container com variável de ambiente VIRTUAL_HOST=&amp;quot;appname.dominio.com&amp;rdquo;  </description>
+            <content type="html"><![CDATA[<h2 id="automatic-proxy---jwilder">Automatic proxy - jwilder</h2>
+<p><a href="https://hub.docker.com/r/jwilder/nginx-proxy/">https://hub.docker.com/r/jwilder/nginx-proxy/</a></p>
+<h2 id="básico">Básico</h2>
+<ol>
+<li>Suba o container com  variável de ambiente <strong>VIRTUAL_HOST=&quot;appname.dominio.com&rdquo;</strong></li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Dockerfile</title>
+            <link>/posts/2020/04/dockerfile/</link>
+            <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/dockerfile/</guid>
+            <description>Dockerfile </description>
+            <content type="html"><![CDATA[<h2 id="dockerfile">Dockerfile</h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Dockerfile &#43; cron </title>
+            <link>/posts/2020/04/dockerfile-cron/</link>
+            <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/dockerfile-cron/</guid>
+            <description>Fazendo Dockerfile + script cron </description>
+            <content type="html"><![CDATA[<h2 id="fazendo-dockerfile--script-cron">Fazendo Dockerfile + script cron</h2>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Erro estranho umount [RESOLVIDO?] </title>
+            <link>/posts/2020/04/erro-estranho-umount-resolvido/</link>
+            <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/erro-estranho-umount-resolvido/</guid>
+            <description>O erro O comando umount -f /data/sync/ &amp;amp;&amp;gt; /dev/null dava um erro: umount: /home device is busy
+Como resolvi? Utilizei a opção -l:
+-l : Also known as Lazy unmount. Detach the filesystem from the filesystem hierarchy now, and cleanup all references to the filesystem as soon as it is not busy anymore. This option works with kernel version 2.4.11+ and above only. </description>
+            <content type="html"><![CDATA[<h2 id="o-erro">O erro</h2>
+<p>O comando <code>umount -f /data/sync/ &amp;&gt; /dev/null</code> dava um erro: <em>umount: /home device is busy</em></p>
+<h2 id="como-resolvi">Como resolvi?</h2>
+<p>Utilizei a opção <code>-l</code>:</p>
+<pre><code>-l : Also known as Lazy unmount. Detach the filesystem from the filesystem 
+hierarchy now, and cleanup all references to the filesystem as soon as it is 
+not busy anymore. This option works with kernel version 2.4.11+ and above only.
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>Gitlab-ci</title>
+            <link>/posts/2020/04/gitlab-ci/</link>
+            <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/gitlab-ci/</guid>
+            <description>Série Docker
+O que gitlab-ci + links Gitlab-runner Como usar gitlab-ci + docker Build: stage: build before_script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY script: - docker build --file Dockerfile --tag $IMAGE_TAG . - docker push $IMAGE_TAG only: refs: - master changes: - &amp;#34;Dockerfile&amp;#34; - &amp;#34;requirements.txt&amp;#34; Atualiza imagem produção: stage: build script: - ssh server &amp;#34;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY &amp;amp;&amp;amp; docker pull $IMAGE_TAG&amp;#34; - ssh server &amp;#34;docker container&amp;#34; </description>
+            <content type="html"><![CDATA[<p><a href="/posts/2020/04/docker-parte-1">Série Docker</a></p>
+<h2 id="o-que-gitlab-ci--links">O que gitlab-ci + links</h2>
+<h2 id="gitlab-runner">Gitlab-runner</h2>
+<h2 id="como-usar-gitlab-ci--docker">Como usar gitlab-ci + docker</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">Build</span>:
+  <span style="color:#66d9ef">stage</span>: build
+  <span style="color:#66d9ef">before_script</span>:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  <span style="color:#66d9ef">script</span>:
+    - docker build --file Dockerfile --tag $IMAGE_TAG .    
+    - docker push $IMAGE_TAG
+  <span style="color:#66d9ef">only</span>:
+    <span style="color:#66d9ef">refs</span>:
+      - master
+    <span style="color:#66d9ef">changes</span>:
+      - <span style="color:#e6db74">&#34;Dockerfile&#34;</span>
+      - <span style="color:#e6db74">&#34;requirements.txt&#34;</span>
+
+<span style="color:#66d9ef">Atualiza imagem produção</span>:
+  <span style="color:#66d9ef">stage</span>: build
+  <span style="color:#66d9ef">script</span>:
+    - ssh server <span style="color:#e6db74">&#34;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY &amp;&amp; docker pull $IMAGE_TAG&#34;</span>
+    - ssh server <span style="color:#e6db74">&#34;docker container&#34;</span>
+</code></pre></div>]]></content>
+        </item>
+        
+        <item>
+            <title>Portainer</title>
+            <link>/posts/2020/04/portainer/</link>
+            <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+            
+            <guid>/posts/2020/04/portainer/</guid>
+            <description>O que é o Portainer? Instalação Interface simples Adicionar Endpoints Adicionar Registry </description>
+            <content type="html"><![CDATA[<h2 id="o-que-é-o-portainer">O que é o Portainer?</h2>
+<h2 id="instalação">Instalação</h2>
+<h2 id="interface-simples">Interface simples</h2>
+<h2 id="adicionar-endpoints">Adicionar Endpoints</h2>
+<h2 id="adicionar-registry">Adicionar Registry</h2>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

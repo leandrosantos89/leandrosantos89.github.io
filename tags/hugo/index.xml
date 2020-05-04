@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Leandro Santos</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in hugo on Leandro Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 01 May 2020 21:13:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploy hugo to github-pages</title>
+      <link>/posts/2020/05/deploy-hugo-to-github-pages/</link>
+      <pubDate>Fri, 01 May 2020 21:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/05/deploy-hugo-to-github-pages/</guid>
+      <description>blog/  deploy.sh public/    github  tem somente o diretório /public do hugo  Build docker run --rm -v $PWD:/blog hugo hugo
+deploy to github deploy.sh
+#!/bin/env bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. `docker run --rm -v $PWD:/blog hugo hugo` # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` git -C public add . # Go To Public folder cd public # Add changes to git.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openssh on Leandro Santos</title>
+    <link>/tags/openssh/</link>
+    <description>Recent content in openssh on Leandro Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Tue, 21 Apr 2020 09:13:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/openssh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSH</title>
+      <link>/posts/2020/04/ssh/</link>
+      <pubDate>Tue, 21 Apr 2020 09:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/ssh/</guid>
+      <description>Instalação - client+server  apt install openssh-client  Troca de chaves  ssh-keygen -b 4096 ssh-copy-id user@server  Acessando com chave privada  Permissão da chave:  A chave não pode ter permissão muito aberta. Use algo do tipo: chmod 600 chave.pem  somente seu user pode editar a chave   Se a permissão for muito permissiva, aparecerá um warning e a conexão não será efetuada.    Organize os acessos com o arquivo ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

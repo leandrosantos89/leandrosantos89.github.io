@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Leandro Santos</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Leandro Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sun, 03 May 2020 14:36:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bash</title>
+      <link>/tags/bash/</link>
+      <pubDate>Sun, 03 May 2020 14:36:50 +0000</pubDate>
+      
+      <guid>/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sun, 03 May 2020 14:36:50 +0000</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>/tags/github/</link>
+      <pubDate>Fri, 01 May 2020 21:13:50 +0000</pubDate>
+      
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Fri, 01 May 2020 21:13:50 +0000</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openssh</title>
+      <link>/tags/openssh/</link>
+      <pubDate>Tue, 21 Apr 2020 09:13:50 +0000</pubDate>
+      
+      <guid>/tags/openssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>/tags/docker/</link>
+      <pubDate>Tue, 21 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>/tags/nginx/</link>
+      <pubDate>Sat, 11 Apr 2020 09:13:50 +0000</pubDate>
+      
+      <guid>/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitlab</title>
+      <link>/tags/gitlab/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>umount</title>
+      <link>/tags/umount/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/tags/umount/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

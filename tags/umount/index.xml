@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>umount on Leandro Santos</title>
+    <link>/tags/umount/</link>
+    <description>Recent content in umount on Leandro Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 11 Apr 2020 07:13:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/umount/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Erro estranho umount [RESOLVIDO?] </title>
+      <link>/posts/2020/04/erro-estranho-umount-resolvido/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/erro-estranho-umount-resolvido/</guid>
+      <description>O erro O comando umount -f /data/sync/ &amp;amp;&amp;gt; /dev/null dava um erro: umount: /home device is busy
+Como resolvi? Utilizei a opção -l:
+-l : Also known as Lazy unmount. Detach the filesystem from the filesystem hierarchy now, and cleanup all references to the filesystem as soon as it is not busy anymore. This option works with kernel version 2.4.11+ and above only. </description>
+    </item>
+    
+  </channel>
+</rss>

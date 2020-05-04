@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/tags/bash/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/bash/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/05/boas-pr%C3%A1ticas-em-bash/sh-shell-scripts/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/linux/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-03T14:36:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/05/deploy-hugo-to-github-pages/</loc>
+    <lastmod>2020-05-01T21:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/github/</loc>
+    <lastmod>2020-05-01T21:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2020-05-01T21:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/openssh/</loc>
+    <lastmod>2020-04-21T09:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/ssh/</loc>
+    <lastmod>2020-04-21T09:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/docker/</loc>
+    <lastmod>2020-04-21T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/docker-parte-1/</loc>
+    <lastmod>2020-04-21T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/docker-compose/</loc>
+    <lastmod>2020-04-21T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</loc>
+    <lastmod>2020-04-11T09:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/nginx/</loc>
+    <lastmod>2020-04-11T09:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/dockerfile/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/dockerfile-cron/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/erro-estranho-umount-resolvido/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/gitlab/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/gitlab-ci/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/portainer/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/umount/</loc>
+    <lastmod>2020-04-11T07:13:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>

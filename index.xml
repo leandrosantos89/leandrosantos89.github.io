@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leandro Santos</title>
+    <link>/</link>
+    <description>Recent content on Leandro Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 09 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Boas práticas em bash/sh - shell scripts</title>
+      <link>/posts/2020/05/boas-pr%C3%A1ticas-em-bash/sh-shell-scripts/</link>
+      <pubDate>Sun, 03 May 2020 14:36:50 +0000</pubDate>
+      
+      <guid>/posts/2020/05/boas-pr%C3%A1ticas-em-bash/sh-shell-scripts/</guid>
+      <description>Comentários  https://cleitonbueno.com/shell-script-comentarios/  comentários de várias linhas não funcionam em todos os SHELL    Debug  set -vx and set +vx bash -vx script.sh https://www.cyberciti.biz/tips/debugging-shell-script.html  function DEBUG   ShellCheck: https://www.cyberciti.biz/programming/improve-your-bashsh-shell-script-with-shellcheck-lint-script-analysis-tool/  install plugin in vim    Exit codes vim https://www.cyberciti.biz/faq/turn-on-or-off-color-syntax-highlighting-in-vi-or-vim/
+mkdir ~/.vim/autoload -p cd .vim/autoload/ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim </description>
+    </item>
+    
+    <item>
+      <title>Deploy hugo to github-pages</title>
+      <link>/posts/2020/05/deploy-hugo-to-github-pages/</link>
+      <pubDate>Fri, 01 May 2020 21:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/05/deploy-hugo-to-github-pages/</guid>
+      <description>blog/  deploy.sh public/    github  tem somente o diretório /public do hugo  Build docker run --rm -v $PWD:/blog hugo hugo
+deploy to github deploy.sh
+#!/bin/env bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. `docker run --rm -v $PWD:/blog hugo hugo` # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` git -C public add . # Go To Public folder cd public # Add changes to git.</description>
+    </item>
+    
+    <item>
+      <title>SSH</title>
+      <link>/posts/2020/04/ssh/</link>
+      <pubDate>Tue, 21 Apr 2020 09:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/ssh/</guid>
+      <description>Instalação - client+server  apt install openssh-client  Troca de chaves  ssh-keygen -b 4096 ssh-copy-id user@server  Acessando com chave privada  Permissão da chave:  A chave não pode ter permissão muito aberta. Use algo do tipo: chmod 600 chave.pem  somente seu user pode editar a chave   Se a permissão for muito permissiva, aparecerá um warning e a conexão não será efetuada.    Organize os acessos com o arquivo ~/.</description>
+    </item>
+    
+    <item>
+      <title>Docker - Parte 1</title>
+      <link>/posts/2020/04/docker-parte-1/</link>
+      <pubDate>Tue, 21 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/docker-parte-1/</guid>
+      <description>O que é Docker? Instalação  latest version: curl -fsSL https://get.docker.com | bash  Primeiros passos docker run -d --name nginx -p 8080:80 nginx:latest
+Parte 1
+Parte 2
+Parte 3
+Portainer</description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>/posts/2020/04/docker-compose/</link>
+      <pubDate>Tue, 21 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/docker-compose/</guid>
+      <description>Como instalar   Documentação oficial: https://docs.docker.com/compose/install/
+  EASY WAY
+ ubuntu: apt install docker-compose não é a versão latest    SCRIPT RAIZ
+  #!/bin/bash VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest \ 	| grep tag_name \ 	| cut -d &amp;#39;&amp;#34;&amp;#39; -f 4) DESTINATION=/usr/local/bin/docker-compose sudo curl \ 	--location https://github.com/docker/compose/releases/download/${VERSION}/\ 	docker-compose-$(uname -s)-$(uname -m) \ 	--output $DESTINATION sudo chmod 755 $DESTINATION Básico version:&amp;#39;3&amp;#39; services: app: container_name:app build: context: .</description>
+    </item>
+    
+    <item>
+      <title>Docker - Proxy reverso **MÁGICO**</title>
+      <link>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</link>
+      <pubDate>Sat, 11 Apr 2020 09:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</guid>
+      <description>Automatic proxy - jwilder https://hub.docker.com/r/jwilder/nginx-proxy/
+Básico  Suba o container com variável de ambiente VIRTUAL_HOST=&amp;quot;appname.dominio.com&amp;rdquo;  </description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>/posts/2020/04/dockerfile/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/dockerfile/</guid>
+      <description>Dockerfile </description>
+    </item>
+    
+    <item>
+      <title>Dockerfile &#43; cron </title>
+      <link>/posts/2020/04/dockerfile-cron/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/dockerfile-cron/</guid>
+      <description>Fazendo Dockerfile + script cron </description>
+    </item>
+    
+    <item>
+      <title>Erro estranho umount [RESOLVIDO?] </title>
+      <link>/posts/2020/04/erro-estranho-umount-resolvido/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/erro-estranho-umount-resolvido/</guid>
+      <description>O erro O comando umount -f /data/sync/ &amp;amp;&amp;gt; /dev/null dava um erro: umount: /home device is busy
+Como resolvi? Utilizei a opção -l:
+-l : Also known as Lazy unmount. Detach the filesystem from the filesystem hierarchy now, and cleanup all references to the filesystem as soon as it is not busy anymore. This option works with kernel version 2.4.11+ and above only. </description>
+    </item>
+    
+    <item>
+      <title>Gitlab-ci</title>
+      <link>/posts/2020/04/gitlab-ci/</link>
+      <pubDate>Sat, 11 Apr 2020 07:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/gitlab-ci/</guid>
+      <description>Série Docker
+O que gitlab-ci + links Gitlab-runner Como usar gitlab-ci + docker Build: stage: build before_script: - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY script: - docker build --file Dockerfile --tag $IMAGE_TAG . - docker push $IMAGE_TAG only: refs: - master changes: - &amp;#34;Dockerfile&amp;#34; - &amp;#34;requirements.txt&amp;#34; Atualiza imagem produção: stage: build script: - ssh server &amp;#34;docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY &amp;amp;&amp;amp; docker pull $IMAGE_TAG&amp;#34; - ssh server &amp;#34;docker container&amp;#34; </description>
+    </item>
+    
+  </channel>
+</rss>

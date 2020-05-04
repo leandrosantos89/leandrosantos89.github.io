@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on Leandro Santos</title>
+    <link>/tags/nginx/</link>
+    <description>Recent content in nginx on Leandro Santos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 11 Apr 2020 09:13:50 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker - Proxy reverso **MÁGICO**</title>
+      <link>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</link>
+      <pubDate>Sat, 11 Apr 2020 09:13:50 +0000</pubDate>
+      
+      <guid>/posts/2020/04/docker-proxy-reverso-m%C3%A1gico/</guid>
+      <description>Automatic proxy - jwilder https://hub.docker.com/r/jwilder/nginx-proxy/
+Básico  Suba o container com variável de ambiente VIRTUAL_HOST=&amp;quot;appname.dominio.com&amp;rdquo;  </description>
+    </item>
+    
+  </channel>
+</rss>
