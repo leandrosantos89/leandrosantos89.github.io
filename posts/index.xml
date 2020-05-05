@@ -56,7 +56,7 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
             <guid>/posts/2020/05/deploy-hugo-to-github-pages/</guid>
             <description>blog/  deploy.sh public/    github  tem somente o diretório /public do hugo  Build docker run --rm -v $PWD:/blog hugo hugo
 deploy to github deploy.sh
-#!/bin/env bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. `docker run --rm -v $PWD:/blog hugo hugo` # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` git -C public add . # Go To Public folder cd public # Add changes to git.</description>
+#!/bin/env bash  echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # rebuild the site docker run --rm -v &amp;#34;$PWD&amp;#34;:/site hugo-builder hugo # add changes git -C public add . git add . MSG=&amp;#34;rebuilding site $(date +%Y/%m/%d-%H:%M)&amp;#34; if [ $# -eq 1 ] then MSG=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$MSG&amp;#34; # Push source and build repos.</description>
             <content type="html"><![CDATA[<ul>
 <li>blog/
 <ul>
@@ -74,25 +74,24 @@ deploy to github deploy.sh
 <h2 id="deploy-to-github">deploy to github</h2>
 <p><strong>deploy.sh</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/env bash
-</span><span style="color:#75715e"></span>echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
-<span style="color:#75715e"># Build the project.</span>
-<span style="color:#e6db74">`</span>docker run --rm -v $PWD:/blog hugo hugo<span style="color:#e6db74">`</span> <span style="color:#75715e"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+</span><span style="color:#75715e"></span>
+echo -e <span style="color:#e6db74">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
+<span style="color:#75715e"># rebuild the site</span>
+docker run --rm -v <span style="color:#e6db74">&#34;</span>$PWD<span style="color:#e6db74">&#34;</span>:/site hugo-builder hugo
+<span style="color:#75715e"># add changes</span>
 git -C public add .
-<span style="color:#75715e"># Go To Public folder</span>
-cd public
-<span style="color:#75715e"># Add changes to git.</span>
 git add .
-<span style="color:#75715e"># Commit changes.</span>
-msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site `date`&#34;</span>
+MSG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuilding site </span><span style="color:#66d9ef">$(</span>date +%Y/%m/%d-%H:%M<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
-  <span style="color:#66d9ef">then</span> msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+  <span style="color:#66d9ef">then</span> MSG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
-git commit -m <span style="color:#e6db74">&#34;</span>$msg<span style="color:#e6db74">&#34;</span>
-git -C public push origin master
+git commit -m <span style="color:#e6db74">&#34;</span>$MSG<span style="color:#e6db74">&#34;</span>
 <span style="color:#75715e"># Push source and build repos.</span>
-git push origin master
-<span style="color:#75715e"># Come Back up to the Project Root</span>
-cd ..
+echo -e <span style="color:#e6db74">&#34;\033[0;32mPushing public files...\033[0m&#34;</span>
+git -C public push
+echo -e <span style="color:#e6db74">&#34;\033[0;32mPush source files...\033[0m&#34;</span>
+git push
+
 </code></pre></div><h2 id="nginx-reverse-proxy">nginx reverse proxy</h2>
 <p><code>docker run -itd -p 80:80 --name proxy -v $PWD/public:/usr/share/nginx/html nginx</code></p>
 ]]></content>

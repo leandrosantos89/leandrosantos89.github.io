@@ -19,7 +19,7 @@
       <guid>/posts/2020/05/deploy-hugo-to-github-pages/</guid>
       <description>blog/  deploy.sh public/    github  tem somente o diretório /public do hugo  Build docker run --rm -v $PWD:/blog hugo hugo
 deploy to github deploy.sh
-#!/bin/env bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Build the project. `docker run --rm -v $PWD:/blog hugo hugo` # if using a theme, replace with `hugo -t &amp;lt;YOURTHEME&amp;gt;` git -C public add . # Go To Public folder cd public # Add changes to git.</description>
+#!/bin/env bash  echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # rebuild the site docker run --rm -v &amp;#34;$PWD&amp;#34;:/site hugo-builder hugo # add changes git -C public add . git add . MSG=&amp;#34;rebuilding site $(date +%Y/%m/%d-%H:%M)&amp;#34; if [ $# -eq 1 ] then MSG=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$MSG&amp;#34; # Push source and build repos.</description>
     </item>
     
   </channel>
