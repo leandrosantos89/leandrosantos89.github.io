@@ -56,7 +56,7 @@ wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
             <guid>/posts/2020/05/deploy-hugo-to-github-pages/</guid>
             <description>blog/  deploy.sh public/    github  tem somente o diretório /public do hugo  Build docker run --rm -v $PWD:/blog hugo hugo
 deploy to github deploy.sh
-#!/bin/env bash  echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # rebuild the site docker run --rm -v &amp;#34;$PWD&amp;#34;:/site hugo-builder hugo # add changes git -C public add . git add . MSG=&amp;#34;rebuilding site $(date +%Y/%m/%d-%H:%M)&amp;#34; if [ $# -eq 1 ] then MSG=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$MSG&amp;#34; # Push source and build repos.</description>
+#!/bin/env bash  echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # rebuild the site docker run --rm -v &amp;#34;$PWD&amp;#34;:/site hugo-builder hugo # add changes git -C public add . git add . MSG=&amp;#34;rebuilding site $(date +%Y/%m/%d-%H:%M)&amp;#34; if [ $# -eq 1 ] then MSG=&amp;#34;$1&amp;#34; fi git -C public commit -m &amp;#34;$MSG&amp;#34; git commit -m &amp;#34;$MSG&amp;#34; # Push source and build repos.</description>
             <content type="html"><![CDATA[<ul>
 <li>blog/
 <ul>
@@ -85,6 +85,7 @@ MSG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rebuildi
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $# -eq <span style="color:#ae81ff">1</span> <span style="color:#f92672">]</span>
   <span style="color:#66d9ef">then</span> MSG<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
 <span style="color:#66d9ef">fi</span>
+git -C public commit -m <span style="color:#e6db74">&#34;</span>$MSG<span style="color:#e6db74">&#34;</span>
 git commit -m <span style="color:#e6db74">&#34;</span>$MSG<span style="color:#e6db74">&#34;</span>
 <span style="color:#75715e"># Push source and build repos.</span>
 echo -e <span style="color:#e6db74">&#34;\033[0;32mPushing public files...\033[0m&#34;</span>
